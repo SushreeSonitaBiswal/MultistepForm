@@ -1,0 +1,180 @@
+/* General body styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:#e7f0fc; /* Body Background */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Form container */
+form {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 25px 20px;
+  background: #e67893; /* Form Background */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Form headings */
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #0077cc; /* Sky Blue */
+  text-transform: capitalize;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0077cc; /* Sky Blue */
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+}
+
+/* Error message styling */
+.error-message {
+  color: #d00216;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Button styling */
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Back Button */
+button.back {
+  background-color: hsl(208, 81%, 13%); /* Muted Gray */
+  color: #ffffff;
+}
+
+button.back:hover {
+  background-color: hsl(206, 83%, 32%); /* Slightly Darker Gray */
+  transform: translateY(-2px);
+}
+
+/* Next/Submit Buttons */
+button.next, button.submit {
+  background: linear-gradient(45deg, #0077cc, #005fa3); /* Gradient Blue */
+  color: #ffffff;
+  box-shadow: 0 4px 10px #28455a66;
+}
+
+button.next:hover, button.submit:hover {
+  background: linear-gradient(45deg, #005fa3, #003f7f); /* Darker Gradient */
+  box-shadow: 0 6px 15px rgba(0, 119, 204, 0.6);
+  transform: translateY(-3px);
+}
+
+button.next:hover::after, button.submit:hover::after {
+  background: rgba(8, 126, 20, 0.2); /* Subtle Glow Effect */
+}
+
+/* Button container for alignment */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Progress indicator styling */
+.progress-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step {
+  width: 25px;
+  height: 25px;
+  background: #ccc; /* Step Background */
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin: 0 10px;
+  position: relative;
+}
+
+.step.active {
+  background: #0077cc; /* Sky Blue for Active Step */
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 40px;
+  height: 2px;
+  background: #ccc; /* Step Connector Background */
+  transform: translateY(-50%);
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+  form {
+    padding: 20px 15px;
+    margin: 40px auto;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 8px 15px;
+  }
+
+  .step {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+  }
+}
+
+
+
